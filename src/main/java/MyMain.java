@@ -1,22 +1,44 @@
 import java.util.Scanner;
 
 public class MyMain {
-    
+
     // Counts the number of 'a', 'b', and 'c' chars in str
     public static int countABC(String str) {
-        // REPLACE WITH YOUR CODE
-        return -1;
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a' || (str.charAt(i) == 'b') || (str.charAt(i) == 'c')) {
+                count++;
+            }
+
+
+
+        }
+
+
+        return count;
     }
 
     // Checks to see whether or not str contains 'The' or 'the'
     public static boolean containsThe(String str) {
-        // REPLACE WITH YOUR CODE
+        for(int i = 0; i<str.length(); i++) {
+            if (str.substring(i, i + 3).equals("the") || str.substring(i, i + 3).equals("The")) {
+                return true;
+            }
+        }
         return false;
     }
 
     // Checks whether str is a palindrome or not
     public static boolean isPalindrome(String str) {
-        // REPLACE WITH YOUR CODEE
+        String res="";
+        for(int i=str.length()-1; i>0; i--) {
+          res=res + str.charAt(i);
+          if (res.equals(str));{
+              return true;
+            }
+        }
+
+
         return false;
     }
     
